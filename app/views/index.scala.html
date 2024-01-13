@@ -1,0 +1,594 @@
+@(email: String)
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/colors.css")">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</head>
+
+<body>
+<!-- Main Container Starts -->
+<div class="main_container">
+    <!-- Aside Starts -->
+    <div class="aside">
+        <div class="logo">
+            <a href="#"><span>W</span>elcome</a>
+        </div>
+        <div class="nav-toggler">
+            <span></span>
+        </div>
+        <ul class="nav">
+            <li><a href="#home" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#about" class="nav-link"><i class="fa fa-user"></i> About</a></li>
+            <li><a href="#exp" class="nav-link"><i class="fa fa-file-circle-check"></i> Experience</a></li>
+            <li><a href="#skill" class="nav-link"><i class="fa fa-list"></i> Skills</a></li>
+            <li><a href="#portfolio" class="nav-link"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fa fa-comments"></i> Contact</a></li>
+        </ul>
+    </div>
+    <!-- Aside End -->
+
+    <!-- Main Content Starts -->
+    <div class="main_content">
+        <!-- Home Section Starts -->
+        <section>
+            <div class="home section" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="home_info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Abhishek Bansal</span></h3>
+                            <h3 class="my_proffesion">I' m a <span class="typing">software developer</span></h3>
+                            <p align="justify">Highly skilled and versatile professional with a strong foundation in
+                                computer
+                                science and a passion for technology. Experienced in various domains, including
+                                Android app development, Flutter development and Web development, I excel in
+                                delivering high-quality results and problem-solving. With expertise in programming
+                                languages such as Java, dart, JavaScript and Kotlin, as well as proficiency in
+                                project development and teamwork, I am well-equipped to contribute to the success of
+                                an esteemed organization in the field of Computer Science Engineering. Committed to
+                                continuous learning and development, I am eager to explore new opportunities and
+                                expand my skills to drive innovation and efficiency.</p>
+                            <a href="#contact" class="btn hire_me">Hire Me</a>
+                        </div>
+                        <div class="home_img padd-15">
+                            <img src="@routes.Assets.versioned("images/myImage.jpg")" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Home Section End -->
+
+        <!-- About Section Starts -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="section_title padd-15">
+                        <h2>About Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about_content padd-15">
+                        <div class="row">
+                            <div class="about_text padd-15">
+                                <h3>I'm a <span class="typing_one"> </span></h3>
+                                <p align="justify">Highly skilled and versatile professional with a strong
+                                    foundation in computer
+                                    science and a passion for technology. Experienced in various domains, including
+                                    Android app development, Flutter development and Web development, I excel in
+                                    delivering high-quality results and problem-solving. With expertise in
+                                    programming languages such as Java, dart, JavaScript and Kotlin, as well as
+                                    proficiency in project development and teamwork, I am well-equipped to
+                                    contribute to the success of an esteemed organization in the field of Computer
+                                    Science Engineering. Committed to continuous learning and development, I am
+                                    eager to explore new opportunities and expand my skills to drive innovation and
+                                    efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="personal_info padd-15">
+                                <div class="row">
+                                    <div class="info_item padd-15">
+                                        <p>Birthday : <span>22 sep 2002</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Age : <span id="ageText">20</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Github : <span><a href="https://github.com/abhishekbansal276/"><i
+                                                class="fa-brands fa-github"></i></a></span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Email : <span>@email</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Degree : <span>B.E (CSE)</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Phone : <span>+91 9058210133</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>City : <span>Chandigarh</span>
+                                        </p>
+                                    </div>
+                                    <div class="info_item padd-15">
+                                        <p>Country : <span>India</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="buttons padd-15">
+                                        <a href="#" class="btn"
+                                           onclick="window.open('./assets/pdf_files/resume.pdf')">Download CV</a>
+                                        <a href="#contact" class="btn hire_me">Hire Me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="education padd-15">
+                                <h3 class="title">Education</h3>
+                                <div class="row">
+                                    <div class="timeline_box padd-15">
+                                        <div class="timeline shadow_dark">
+                                            <!-- <div class="timeline_plane">
+                                                <div><i class="fas fa-plane fa-lg plane"></i></div>
+                                            </div> -->
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> Aug 2020 - Aug 2024
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Bachelor of Engineering in computer science
+                                                </h4>
+                                                <p class="institute-name">Chandigarh University</p>
+                                                <p class="institute-name marks">8.3 CGPA</p>
+                                                <p class="timeline_text">Currently, I am pursuing my Bachelor of
+                                                    Engineering in Computer science with specialization in Artificial intelligence and Machine
+                                                    learning (AIML) from Chandigarh University.</p>
+                                            </div>
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> April 2018 - April 2019
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Class 12th
+                                                </h4>
+                                                <p class="institute-name">K.D.B Public School</p>
+                                                <p class="institute-name marks">82%</p>
+                                                <p class="timeline_text">I have completed my 12th from K.D.B Public School.</p>
+                                            </div>
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> April 2016 - April 2017
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Class 10th
+                                                </h4>
+                                                <p class="institute-name">Maples Academy</p>
+                                                <p class="institute-name marks">10.0 CGPA</p>
+                                                <p class="timeline_text">I have completed my 10th from Maples Academy.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="training padd-15">
+                                <h3 class="title">Training</h3>
+                                <div class="row">
+                                    <div class="timeline_box padd-15">
+                                        <div class="timeline shadow_dark">
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> Aug 2022 - March 2023
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Android Development
+                                                </h4>
+                                                <p class="institute-name">Dynamic Future Tech Pvt. Ltd.</p>
+                                                <p class="timeline_text">I have completed my Android Development
+                                                    training from Dynamic Future Tech pvt. ltd.</p>
+                                            </div>
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> May 2022 - July 2022
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Java
+                                                </h4>
+                                                <p class="institute-name">Dynamic Future Tech Pvt. Ltd.</p>
+                                                <p class="timeline_text">I have completed my Java
+                                                    training from Dynamic Future Tech pvt. ltd.</p>
+                                            </div>
+                                            <!-- Timeline item-->
+                                            <div class="timeline_item">
+                                                <div class="circle_dot"></div>
+                                                <h3 class="timeline_date">
+                                                    <i class="fa fa-calendar"></i> July 2022 - August 2022
+                                                </h3>
+                                                <h4 class="timeline_title">
+                                                    Kotlin
+                                                </h4>
+                                                <p class="institute-name">Dynamic Future Tech Pvt. Ltd.</p>
+                                                <p class="timeline_text">I have completed my Kotlin
+                                                    training from Dynamic Future Tech pvt. ltd.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <!-- Experience Section Starts -->
+        <section class="experience section" id="exp">
+            <div class="container">
+                <div class="row">
+                    <div class="exp padd-15">
+                        <h3 class="title">Experience</h3>
+                        <div class="row">
+                            <div class="timeline_box padd-15">
+                                <div class="timeline shadow_dark">
+                                    <!-- <div class="timeline_plane">
+                                        <div><i class="fas fa-plane fa-lg plane"></i></div>
+                                    </div> -->
+                                    <!-- Timeline item-->
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_date">
+                                            <i class="fa fa-calendar"></i> Nov 2023 - Present
+                                        </h3>
+                                        <h4 class="timeline_title">
+                                            Software Engineer Trainee
+                                        </h4>
+                                        <p class="timeline_text">Currently pursuing training in Scala, Play Framework, Kafka, and Spark.</p>
+                                    </div>
+                                    <!-- Timeline item-->
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_date">
+                                            <i class="fa fa-calendar"></i> Aug 2022 - Feb 2023
+                                        </h3>
+                                        <h4 class="timeline_title">
+                                            Java Trainer Internship
+                                        </h4>
+                                        <p class="timeline_text">Here I was working as a Java teacher.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Experience Section Ends -->
+
+        <!-- Skills Section Starts -->
+        <section class="skills_container section" id="skill">
+            <div class="container">
+                <div class="row">
+                    <div class="section_title padd-15">
+                        <h2>Skills</h2>
+                    </div>
+                </div>
+                <div class="skill_box shadow_dark padd-15">
+                    <div class="row">
+                        <div class="skills padd-15">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="skill-category">
+                                            <h3 class="subtitle">Programming Languages</h3>
+                                            <p class="skills-list">
+                                                <span class="skill-dot">Java</span>
+                                                <span class="skill-dot">Scala</span>
+                                                <span class="skill-dot">Dart</span>
+                                                <span class="skill-dot">Kotlin</span>
+                                                <span class="skill-dot">C++</span>
+                                                <span class="skill-dot">Python</span>
+                                                <span class="skill-dot">SQL</span>
+                                                <span class="skill-dot">JavaScript</span>
+                                                <span class="skill-dot">HTML/CSS</span>
+                                            </p>
+                                        </div>
+                                    <div class="skill-category">
+                                            <h3 class="subtitle">Development</h3>
+                                            <p class="skills-list">
+                                                <span class="skill-dot">Web</span>
+                                                <span class="skill-dot">Applications</span>
+                                            </p>
+                                        </div>
+                                    <div class="skill-category">
+                                            <h3 class="subtitle">Frameworks</h3>
+                                            <p class="skills-list">
+                                                <span class="skill-dot">Flutter</span>
+                                                <span class="skill-dot">Play Framework</span>
+                                                <span class="skill-dot">Android</span>
+                                            </p>
+                                        </div>
+                                    <div class="skill-category">
+                                            <h3 class="subtitle">Interpersonal Skills</h3>
+                                            <p class="skills-list">
+                                                <span class="skill-dot">Critical Thinking</span>
+                                                <span class="skill-dot">Decision-Making</span>
+                                                <span class="skill-dot">Active Listening</span>
+                                                <span class="skill-dot">Adaptability and Empathy</span>
+                                                <span class="skill-dot">Leadership</span>
+                                                <span class="skill-dot">Teamwork and Management</span>
+                                            </p>
+                                        </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section End -->
+
+        <!-- Portfolio Section Starts -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="section_title padd_15">
+                        <h2>Portfolio</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="portfolio_heading padd-15">
+                        <h2>My Last Projects :</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_one.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_two.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_one.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_one.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_one.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                    <!-- Portfolio items starts -->
+                    <div class="portfolio_item padd-15">
+                        <div class="portfolio_item_inner shadow_dark">
+                            <div class="portfolio_img">
+                                <img src="assets/images/portfolio_img_one.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio items ends -->
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section End -->
+
+        <!-- Contact Section Starts -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="section_title padd_15">
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+                <h3 class="contact_title padd-15">Have You Any Questions ?</h3>
+                <h4 class="contact_sub_title padd-15">I'M AT YOUR SERVICES</h4>
+                <div class="row">
+                    <!-- Contact ifo item start -->
+                    <div class="contact_info_item padd-15">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h4>Call Us On</h4>
+                        <p>+91 9058210133</p>
+                    </div>
+                    <!-- Contact ifo item end -->
+                    <!-- Contact ifo item start -->
+                    <div class="contact_info_item padd-15">
+                        <div class="icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <h4>Home</h4>
+                        <p>Baddi, Himachal Pradesh</p>
+                    </div>
+                    <!-- Contact ifo item end -->
+                    <!-- Contact ifo item start -->
+                    <div class="contact_info_item padd-15">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>@email</p>
+                    </div>
+                    <!-- Contact ifo item end -->
+                    <!-- Contact ifo item start -->
+                    <div class="contact_info_item padd-15">
+                        <div class="icon">
+                            <i class="fa fa-globe-europe"></i>
+                        </div>
+                        <h4>Website</h4>
+                        <p>www.domain.com</p>
+                    </div>
+                    <!-- Contact ifo item end -->
+                </div>
+                <h3 class="contact_title padd-15">EMAIL ME</h3>
+                <h4 class="contact_sub_title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                <!-- Contact Form -->
+                <div class="row">
+                    <div class="contact_form padd-15">
+                        <div class="row">
+                            <div class="form_item col-6 padd-15">
+                                <div class="form_group">
+                                    <input type="text" class="form_control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form_item col-6 padd-15">
+                                <div class="form_group">
+                                    <input type="email" class="form_control" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form_item col-12 padd-15">
+                                <div class="form_group">
+                                    <input type="text" class="form_control" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form_item col-12 padd-15">
+                                <div class="form_group">
+                                    <textarea name="" class="form_control" id="" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form_item col-12 padd-15">
+                                <button type="submit" class="btn" style="cursor: pointer;"
+                                        onclick="sendEmail()">Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social_icons padd-15">
+                    <div class="icon_list">
+                        Social icon one
+                    </div>
+                    <div class="icon_list">
+                        Social icon one
+                    </div>
+                    <div class="icon_list">
+                        Social icon one
+                    </div>
+                    <div class="icon_list">
+                        Social icon one
+                    </div>
+                    <div class="icon_list">
+                        Social icon one
+                    </div>
+                    <div class="icon_list">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </div>
+    <!-- Main Content End -->
+</div>
+<!-- Main Container End -->
+
+<!-- JS Files -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var sidebarLinks = document.querySelectorAll('.nav-link');
+
+        sidebarLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                sidebarLinks.forEach(function (otherLink) {
+                    otherLink.classList.remove('active');
+                });
+
+                link.classList.add('active');
+            });
+        });
+    });
+</script>
+<script>
+    var dob = new Date("09/22/2002");
+    var month_diff = Date.now() - dob.getTime();
+    var age_dt = new Date(month_diff);
+    var year = age_dt.getUTCFullYear();
+    var age = Math.abs(year - 1970);
+    document.getElementById('ageText').innerText = age.toString();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+<script src="@routes.Assets.versioned("javascripts/index.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    function sendEmail() {
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: @email,
+            Password: "vbzepymtscamwavr",
+            To: @email,
+            From: @email,
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+        })
+            .then(function (message) {
+                alert("mail sent successfully")
+            });
+    }
+</script>
+
+</body>
+
+</html>
